@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+button{
+    background-color: #ff0000;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+header {
+    background-color: #121212;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 100px 20px 50px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#home {
+    background: url('../img/gym.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#home h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+#home p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+#home button {
+    background-color: #ff0000;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#home button:hover {
+    background-color: #e60000;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #ff0000;
+}
+
+p, ul {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 1em;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+form button {
+    background-color: #ff0000;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e60000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #home h1 {
+        font-size: 3em;
+    }
+
+    #home p {
+        font-size: 1.2em;
+    }
+
+    #home button {
+        padding: 0.8em 1.5em;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #home h1 {
+        font-size: 2.5em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    #home button {
+        padding: 0.5em 1em;
+        font-size: 0.8em;
+    }
+}
+
+input:focus {
+    outline: 1px solid #ff0000;
+}
+
+textarea:focus {
+    outline: 2px solid #ff0000;
+    outline-offset: 0px; 
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: #1d1c1c;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.sidebar li{
+    width: 100%;
+
+}
+.sidebar a{
+    width: 100%;
+}
+
+@media(max-width: 770px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu{
+        background-color: #222;
+        display: flex;
+        justify-content: right;
+    }
+    .img{
+        display: flex;
+        justify-content: left;
+    }
+}
+.menu{
+    display: flex;
+    justify-content:center;
+}
+@media(min-width: 770px){
+    .menu{
+        display: none;
+    }
+}
+.img{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}  
+
+footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer-container .social-icons {
+    margin: 20px 0;
+}
+
+footer .footer-container .social-icons a {
+    color: #ff0000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+footer .footer-container .social-icons a:hover {
+    color: #fff;
+}
+
+footer .footer-container .footer-links {
+    margin-bottom: 10px;
+}
+
+footer .footer-container .footer-links a {
+    color: #ff0000;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .footer-container .footer-links a:hover {
+    color: #fff;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+#pricing {
+    padding: 50px 20px;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+}
+
+#pricing h1 {
+    font-size: 2.5em;
+    color: #ff0000;
+    margin-bottom: 1em;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-card {
+    background-color: #222;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+.pricing-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.pricing-card .price {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.pricing-card .price span {
+    font-size: 0.5em;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pricing-card ul li {
+    background-color: #333;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pricing-card button {
+    background-color: #ff0000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-card button:hover {
+    background-color: #e60000;
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
